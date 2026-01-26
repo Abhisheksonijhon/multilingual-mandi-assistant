@@ -170,7 +170,7 @@ export async function POST(req: Request) {
       case 'nearby_mandis':
         return handleNearbyMandisQuery(analysisResult, language);
       case 'comparison':
-        return handleComparisonQuery(analysisResult, language);
+        return handleMultiLocationQuery(analysisResult, language); // Use multi-location for comparison
       case 'general_help':
         return handleGeneralHelpQuery(analysisResult, language);
       default:
@@ -337,7 +337,7 @@ async function handleCategorySearchQuery(analysis: QueryAnalysis, language: stri
       hindi_name: value.hindi,
       price: calculatePrice(key, 'indore'),
       unit: value.unit,
-      quality: value.quality || 'Standard',
+      quality: (value as any).quality || 'Standard',
       category: value.category
     }))
     .slice(0, 10); // Limit to 10 items for readability
@@ -382,13 +382,13 @@ async function handleCategorySearchQuery(analysis: QueryAnalysis, language: stri
 // Handle quality-based searches
 async function handleQualitySearchQuery(analysis: QueryAnalysis, language: string) {
   const qualityItems = Object.entries(CROP_PRICES)
-    .filter(([key, value]) => value.quality)
+    .filter(([key, value]) => (value as any).quality)
     .map(([key, value]) => ({
       name: key,
       hindi_name: value.hindi,
       price: calculatePrice(key, 'indore'),
       unit: value.unit,
-      quality: value.quality,
+      quality: (value as any).quality,
       category: value.category
     }))
     .sort((a, b) => {
