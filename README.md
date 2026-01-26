@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧑‍🌾 किसान बडी - Multilingual Mandi Assistant
 
-## Getting Started
+A real-time agricultural marketplace chatbot that provides live mandi prices, bargaining assistance, and multilingual support for Indian farmers and vendors.
 
-First, run the development server:
+## 🌟 Features
+
+- **Live Government Data**: Real-time prices from AGMARKNET API
+- **Multilingual Support**: Hindi, English, Bundeli, Bagheli, Malvi, Nimadi
+- **Smart Bargaining**: AI-powered negotiation assistance
+- **Voice Input**: Speak in your local language
+- **Live Price Ticker**: Real-time market updates
+- **Mobile-First Design**: Optimized for smartphones
+
+## 🚀 Quick Start
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 Live Demo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Visit: [Your Deployed URL Here]
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📱 How to Use
 
-## Learn More
+1. **Select Language**: Choose from 6 regional languages
+2. **Ask Questions**: "आज प्याज का भाव क्या है इंदौर में?"
+3. **Get Live Prices**: Real-time APMC data
+4. **Start Bargaining**: Compare offers with market rates
+5. **Voice Input**: Speak your queries
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Frontend**: Next.js 16, React 19, TypeScript
+- **Styling**: Tailwind CSS 4
+- **API**: Government AGMARKNET integration
+- **Deployment**: Vercel/Netlify ready
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🏆 Hackathon Ready
 
-## Deploy on Vercel
+Perfect for agricultural hackathons with:
+- Real-world farmer impact
+- Government data integration
+- Cultural sensitivity
+- Technical innovation
+- Scalable architecture
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📊 API Integration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Uses official Indian government APIs:
+- AGMARKNET for live mandi prices
+- State-wise market data
+- Real-time price updates
+
+## 🌍 Deployment
+
+### Free Deployment Options:
+
+1. **Vercel** (Recommended)
+2. **Netlify**
+3. **Railway**
+4. **Render**
+
+See deployment guide below.
+
+## 📄 License
+
+MIT License - Built for farmers, by developers.
+
+---
+
+**Made with ❤️ for Indian Agriculture**

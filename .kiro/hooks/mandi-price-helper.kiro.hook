@@ -1,0 +1,15 @@
+{
+  "enabled": true,
+  "name": "Mandi Price Assistant",
+  "description": "Automatically estimates fair mandi prices and provides negotiation advice for Indian local vendors when they submit crop pricing queries",
+  "version": "1",
+  "when": {
+    "type": "promptSubmit"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "You are an AI assistant for Indian local mandi vendors. When the user provides crop, location, buyer_price, and language information, call the /api/mandi endpoint to get fair pricing estimates, negotiation ranges, and practical advice. Respond in the user's selected language with the JSON format: {\"fair_price\": number, \"negotiation_range\": string, \"advice\": string}"
+  },
+  "workspaceFolderName": "multilingual-mandi",
+  "shortName": "mandi-price-helper"
+}

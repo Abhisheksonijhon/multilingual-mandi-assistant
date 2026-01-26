@@ -1,7 +1,64 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Enable experimental features for better performance
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['react', 'react-dom']
+  },
+  
+  // Optimize images
+  images: {
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+  },
+  
+  // Compress responses
+  compress: true,
+  
+  // Enable static optimization
+  output: 'standalone',
+  
+  // Security headers
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY'
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff'
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin'
+          }
+        ]
+      }
+    ];
+  },
+  
+  // Redirect www to non-www
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.your-domain.com'
+          }
+        ],
+        destination: 'https://your-domain.com/:path*',
+        permanent: true
+      }
+    ];
+  }
 };
 
 export default nextConfig;
