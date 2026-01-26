@@ -1,28 +1,7 @@
 {
-  "name": "multilingual-mandi",
+  "name": "kisan-buddy-mandi-ai",
   "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
   "env": {
     "NODE_ENV": "production"
-  },
-  "functions": {
-    "app/api/mandi/route.ts": {
-      "maxDuration": 10
-    }
   }
 }
