@@ -1,7 +1,0 @@
-{
-  "name": "kisan-buddy-mandi-ai",
-  "version": 2,
-  "env": {
-    "NODE_ENV": "production"
-  }
-}
