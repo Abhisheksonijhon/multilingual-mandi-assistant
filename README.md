@@ -29,7 +29,7 @@ npm start
 
 ## 🌐 Live Demo
 
-Visit: [Your Deployed URL Here]
+Visit: [https://multilingual-mandi-assistant-11t1.vercel.app/]
 
 ## 📱 How to Use
 
